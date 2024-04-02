@@ -3,9 +3,23 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      gha:
+        update-types:
+          - patch
+          - minor
+        patterns:
+          - '*'
 
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      npm:
+        update-types:
+          - patch
+          - minor
+        patterns:
+          - '*'
